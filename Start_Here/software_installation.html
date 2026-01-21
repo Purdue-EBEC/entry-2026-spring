@@ -492,17 +492,22 @@ Mac OS/Linux</label><div class="sd-tab-content docutils">
 <input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-1">
 Windows</label><div class="sd-tab-content docutils">
-<p>Install <code class="docutils literal notranslate"><span class="pre">uv</span></code> for Windows.</p>
+<ol class="arabic">
+<li><p>Install <code class="docutils literal notranslate"><span class="pre">uv</span></code> for Windows.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>powershell<span class="w"> </span>-ExecutionPolicy<span class="w"> </span>ByPass<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;irm https://astral.sh/uv/install.ps1 | iex&quot;</span>
 </pre></div>
 </div>
-<p>After installation, set the execution policy for PowerShell scripts to RemoteSigned by
-running the following command in your PowerShell terminal.  This allows you to run
-locally created scripts without signing them, while still requiring that scripts
-downloaded from the internet are signed by a trusted publisher.</p>
+</li>
+<li><p>After installation, set the execution policy for PowerShell scripts to
+RemoteSigned by running the following command in your PowerShell terminal.  This
+allows you to run locally created scripts without signing them, while still
+requiring that scripts downloaded from the internet are signed by a trusted
+publisher.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Set-ExecutionPolicy<span class="w"> </span>-Scope<span class="w"> </span>CurrentUser<span class="w"> </span>-ExecutionPolicy<span class="w"> </span>RemoteSigned
 </pre></div>
 </div>
+</li>
+</ol>
 <figure class="align-default" id="id9">
 <img alt="../_images/uv_installation_windows.png" src="../_images/uv_installation_windows.png" />
 <figcaption>
@@ -512,8 +517,8 @@ downloaded from the internet are signed by a trusted publisher.</p>
 </div>
 </div>
 </li>
-<li><p>Open another new  terminal, and run the following command to install
-<strong class="program">Python</strong>.</p>
+<li><p>Close <strong class="program">VS Code</strong> and then open it again.  Then, in the new terminal, run the
+following command to install <strong class="program">Python</strong>.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>uv<span class="w"> </span>python<span class="w"> </span>install<span class="w"> </span><span class="m">3</span>.13
 </pre></div>
 </div>
@@ -523,8 +528,7 @@ downloaded from the internet are signed by a trusted publisher.</p>
 <p><span class="caption-number">Fig. 11 </span><span class="caption-text">A screenshot of VS Code with Python installation commands entered into the terminal.</span><a class="headerlink" href="#id10" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-</li>
-<li><p>Test that Python is installed correctly by running the following command</p>
+<p>You can test that Python is installed correctly by running the following command</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>uv<span class="w"> </span>run<span class="w"> </span>python<span class="w"> </span>--version
 </pre></div>
 </div>
@@ -533,13 +537,13 @@ downloaded from the internet are signed by a trusted publisher.</p>
 </pre></div>
 </div>
 </li>
-<li><p>Now, close <strong class="program">VS Code</strong>, and create a folder to contain all your EBEC course
-files.  You can use the File Explorer(Windows) or Finder(Mac) to do this.</p></li>
-<li><p>Open <strong class="program">VS Code</strong> again, and open the folder you just created by selecting
-<span class="guilabel">File -&gt; Open Folder…</span> from the menu bar.</p>
+<li><p>Create a folder to contain all your EBEC course files.  You can use the File
+Explorer(Windows) or Finder(Mac) to do this.  Then in <strong class="program">VS Code</strong>, open the
+folder you just created by selecting <span class="guilabel">File -&gt; Open Folder…</span> from the menu
+bar.</p>
 <div class="admonition-note admonition">
 <p class="admonition-title">Note</p>
-<p>Make sure you open the folder you created in step 4, not just a single file inside
+<p>Make sure you open the folder you just created, and not just a single file inside
 that folder.  This ensures that the virtual environment we are about to create will
 be stored inside this folder.</p>
 </div>
