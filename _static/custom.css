@@ -95,3 +95,13 @@ svg text {
 svg polygon {
   fill: currentColor;
 }
+
+/* Team member card styling */
+.sd-card-title {
+  text-align: center !important;
+}
+
+/* remove dd indentation on team member cards */
+.team-grid dd {
+  margin-left: 0 !important;
+}
